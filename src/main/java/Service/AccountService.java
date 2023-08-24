@@ -17,7 +17,6 @@ public class AccountService {
 
     // Requirement 1
     public Account registerAccount(Account account) {
-        try {
             String pw = account.getPassword();
             String username = account.getUsername();
             Boolean userExists = accountDAO.checkUsernameExist(username);
@@ -26,9 +25,6 @@ public class AccountService {
                 } else {
                     return null;
                 }
-            } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
         return account;
     }
 

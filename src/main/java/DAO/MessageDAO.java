@@ -125,15 +125,7 @@ public class MessageDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            // Close the connection
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
-    
         return null; // Return null if no rows were updated
     }
 
